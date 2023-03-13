@@ -1,0 +1,6 @@
+kind: ImageStream
+metadata:
+  name: simple-docker-build
+spec:
+  lookupPolicy:
+    local: false

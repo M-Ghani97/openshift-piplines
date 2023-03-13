@@ -1,0 +1,20 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: simple-docker-build
+spec:
+  replicas: 3
+  selector:
+    name: simple-docker-build
+  triggers:
+  - type: ConfigChange 
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - simple-docker-build
+      from:
+        kind: ImageStreamTag
+        name: simple-docker-build:latest
+    type: ImageChange  
+  strategy:
+    type: Rolling

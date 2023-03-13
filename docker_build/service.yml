@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-docker-build      
+spec:
+  selector:                  
+    name: simple-docker-build 
+  ports:
+  - nodePort: 0
+    port: 80               
+    protocol: TCP
+    targetPort: 8080         
