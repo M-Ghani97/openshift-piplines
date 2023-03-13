@@ -12,7 +12,7 @@ spec:
           name: "github-webhook"
   source:
     git:
-      uri: 'https://github.com/openshift-examples/container-build.git'
+      uri: 'https://github.com/M-Ghani97/openshift-piplines.git'
       sourceSecret:
       name: "github-token"
     contextDir: "docker_build"
