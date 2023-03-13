@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: github_token
+  name: github-token
 type: kubernetes.io/basic-auth
 stringData:
   username: "M-Ghani97"

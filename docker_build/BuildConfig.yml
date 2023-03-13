@@ -9,12 +9,12 @@ spec:
     - type: "GitHub"
       github:
         secretReference:
-          name: "github_webhook"
+          name: "github-webhook"
   source:
     git:
       uri: 'https://github.com/openshift-examples/container-build.git'
       sourceSecret:
-      name: "github_token"
+      name: "github-token"
     contextDir: "docker_build"
   strategy:
     dockerStrategy:
