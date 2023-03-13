@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: github_token
+type: kubernetes.io/basic-auth
+stringData:
+  username: "M-Ghani97"
+  password: "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"
