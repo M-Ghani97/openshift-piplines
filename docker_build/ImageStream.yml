@@ -1,8 +1,8 @@
+apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
   name: simple-docker-build
+  namespace: docker-build
 spec:
   lookupPolicy:
     local: false
-status:
-  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/docker-build/simple-docker-build

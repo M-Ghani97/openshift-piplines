@@ -6,6 +6,19 @@ spec:
   replicas: 3
   selector:
     name: simple-docker-build
+  template:
+    metadata:
+      labels:
+        name: simple-docker-build
+      name: simple-docker-build
+    spec:
+      containers:
+        name: simple-docker-build
+        image: image-registry.openshift-image-registry.svc:5000/openshift/simple-docker-build:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+          protocol: TCP
   triggers:
   - type: ConfigChange 
   - imageChangeParams:
@@ -15,6 +28,7 @@ spec:
       from:
         kind: ImageStreamTag
         name: simple-docker-build:latest
+        namespace: docker-build
     type: ImageChange  
   strategy:
     type: Rolling
