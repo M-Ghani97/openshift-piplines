@@ -7,6 +7,6 @@ spec:
     name: simple-docker-build 
   ports:
   - nodePort: 0
-    port: 80               
+    port: 80
     protocol: TCP
     targetPort: 8080
