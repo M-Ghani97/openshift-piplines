@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: simple-docker-build
+  namespace: docker-build
+spec:
+  host: simple-docker-build-docker-build.apps.ocp.techive.cloud
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: simple-docker-build
+    weight: 100
+  wildcardPolicy: None
