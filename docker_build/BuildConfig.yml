@@ -18,7 +18,7 @@ spec:
     contextDir: "docker_build"
   strategy:
     dockerStrategy:
-      dockerfilePath: docker_build/Dockerfile
+      dockerfilePath: Dockerfile
   output:
     to:
       kind: ImageStreamTag
