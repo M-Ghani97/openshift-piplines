@@ -13,9 +13,9 @@ spec:
   source:
     git:
       uri: 'https://github.com/M-Ghani97/openshift-piplines.git'
-      sourceSecret:
-        name: "github-token"
-    contextDir: "docker_build"
+    contextDir: "docker_build/app"
+    sourceSecret:
+      name: "github-token"
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile
